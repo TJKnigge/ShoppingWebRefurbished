@@ -1,27 +1,24 @@
 <?php
 
-/*
- * 
- * Made by T. J. Knigge.
- * This project is to bring more structure in an old project
- */
-
 session_start();
+
 
 function showHeader() {
     $returnString = <<<HEADSTRING
         <html>
             <head>
                 
-                <link rel = "stylesheet" type = "text/css" href = "StyleSheet.css">
+                
                 <link rel = "footerStyle" type = "text/css" href = "footerStyle.css">
+                <link rel = "cart" href="cart.css"/>
+                
             
-                <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+                <link rel =" stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
                 <script src="jquery-3.2.1.js"></script>
                 <script>
                 function logout(){
                     document.location="Logout.php";
-   
                 }
                 </script>
             </head>
@@ -46,9 +43,10 @@ function connectionDB() {
 
     $conn = new mysqli($hostname, $username, $password, $databasenaam);
     return $conn;
-
-    if (!$conn) {
-        die("DB failed to connect" . mysqli_error($conn));
-    }
 }
+
+//    if (!$conn) {
+//        die("DB failed to connect" . mysqli_error($conn));
+//    }
 ?>
+

@@ -5,19 +5,14 @@ This project is to bring more structure in an old project
 
 -->
 <?php
-require 'General.php';
+include 'General.php';
+echo showHeader();
 
+header('Location: pageHead.php');
 ?>
 
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+footer ('Location: footerPage.php');
+        echo showFooter();
+?>
