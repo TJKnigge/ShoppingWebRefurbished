@@ -6,13 +6,13 @@ This project is to bring more structure in an old project
 -->
 <?php
 include 'General.php';
+
+$conn = connectionDB();
 echo showHeader();
 
-header('Location: pageHead.php');
+//header('Location: pageHead.php');
 ?>
 
-
 <?php
-footer ('Location: footerPage.php');
-        echo showFooter();
+echo showFooter();
 ?>

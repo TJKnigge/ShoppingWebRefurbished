@@ -1,5 +1,5 @@
 <?php
-include 'General.php';
+
 echo showHeader();
 
 $product_ids = array();
@@ -59,37 +59,42 @@ function pre_r($array) {
     echo'</pre>';
 }
 ?>
+<HTML>
+    <head>
 
+        <link rel = "cart" type = "text/css" href = "cart.css">
 
-<div class="menu">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a href="mainpage.php" class="navbar-brand" title="PHP Computer store Home " style="padding-top: 12px ;font-family: Georgia ">PHP Developers Store</a>
-        </div>
-        <div>
-            <ul class="nav navbar-nav navbar-right">
-                <li style="padding-top: 8px"> <?php if (isset($_SESSION['name'])) { ?> <a><span class="glyphicon glyphicon-user" style="  color:white ; font-size: 15px; font-weight: bold  ">
-                                <?PHP echo $_SESSION['name']; ?> </span></a> </li>
-                    <li><a href="seller.php"><span class="glyphicon glyphicon-barcode" style="padding-top: 10px"></span> Seller page</a></li>
-                <?PHP } ?>    
-                <li><?php if (isset($_SESSION['name'])) { ?><li><a href="logout.php"><span class="glyphicon glyphicon-log-out" style="padding-top: 10px"></span> Logout</a></li> 
-                    <select class="glyphicon glyphicon-log-in" style="padding-top: 5px; margin-top: 10px"> Serach
-                        <option> Computers </option>
-                        <option> Laptops</option>
-                        <option> Cameras</option>
-                    </select>                            
-                <?PHP } else {
-                    ?> <li><a href="signUp.php" ><span class="glyphicon glyphicon-user"style="padding-top: 10px"></span> Sign Up</a></li>
-                    <li><a href="login.php"><span class="glyphicon glyphicon-log-in" style="padding-top: 10px"></span> Login</a></li>
+    </head>
 
-                    <?php
-                }
-                ?>
+    <div class="menu">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="mainpage.php" class="navbar-brand" title="PHP Computer store Home " style="padding-top: 12px ;font-family: Georgia ">PHP Developers Store</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="padding-top: 8px"> <?php if (isset($_SESSION['name'])) { ?> <a><span class="glyphicon glyphicon-user" style="  color:white ; font-size: 15px; font-weight: bold  ">
+                                    <?PHP echo $_SESSION['name']; ?> </span></a> </li>
+                        <li><a href="seller.php"><span class="glyphicon glyphicon-barcode" style="padding-top: 10px"></span> Seller page</a></li>
+                    <?PHP } ?>    
+                    <li><?php if (isset($_SESSION['name'])) { ?><li><a href="logout.php"><span class="glyphicon glyphicon-log-out" style="padding-top: 10px"></span> Logout</a></li> 
+                        <select class="glyphicon glyphicon-log-in" style="padding-top: 5px; margin-top: 10px"> Serach
+                            <option> Computers </option>
+                            <option> Laptops</option>
+                            <option> Cameras</option>
+                        </select>                            
+                    <?PHP } else {
+                        ?> <li><a href="signUp.php" ><span class="glyphicon glyphicon-user"style="padding-top: 10px"></span> Sign Up</a></li>
+                        <li><a href="login.php"><span class="glyphicon glyphicon-log-in" style="padding-top: 10px"></span> Login</a></li>
 
-            </ul>
+                        <?php
+                    }
+                    ?>
+
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<?php
-echo showFooter();
-?>
+    <?php
+    echo showFooter();
+    ?>
